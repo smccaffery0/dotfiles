@@ -1,0 +1,35 @@
+
+#WINDOW SETTINGS
+hide_window_decorations yes
+remember_window_size yes
+initial_window_width 800
+initial_window_height 400
+
+#TAB BAR SETTINGS
+tab_bar_edge top
+tab_bar_style powerline
+tab_powerline_style slanted
+
+#MOUSE SETTINGS
+mouse_hide_wait 5.0
+
+#SCROLL SETTINGS
+scrollback_lines 7000
+
+#FONT SETTINGS
+font_family JetBrainsMono Nerd Font
+font_size 15
+
+notify_cmd_on_finish invisible 20
+
+# BEGIN_KITTY_THEME
+# 1984 Dark
+include current-theme.conf
+# END_KITTY_THEME
+
+
+#WATER MARK LOGO
+window_logo_path /home/nathera/Pictures/logo_60x60-Photoroom.png
+window_logo_position bottom-right
+window_logo_alpha 0.85
+window_logo_scale 0
