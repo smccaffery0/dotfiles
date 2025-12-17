@@ -1,0 +1,101 @@
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "margin-top": 7,
+    "margin-bottom": 7,
+    "margin-right": 5,
+    "margin-left": 5,
+    "exclusive": true,
+    "passthrough": false,
+    "fixed-center": true,
+    "margin-right": 500,
+    "margin-left": 500,
+
+    "modules-left": [
+        "battery",
+        "network",
+        "wireplumber"
+
+    ],
+
+
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "clock",
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "all-outputs": true,
+        "tooltip-format": "{name}",
+        "tooltip-format-workspace": "{name}%",
+        "active-only": false,
+
+    },
+ 
+
+    "clock": {
+        "format": "{:%H:%M}"
+    },
+
+    "battery": {
+        "format": "{capacity}% ",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "critical-threshold": 15,
+        "format-critical": "{capacity}% "
+    },
+
+    "wireplumber": {
+        "format": "{volume}%",
+        "format-muted": "{icons} MUTED",
+        "format-icons": {
+            "default": [
+                "󰕿",
+                "󰕾",
+            ],
+            "muted": "󰝟"
+        },
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "scroll-step": 5,
+        "max-volume": 130,
+
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-disconnected": "⚠",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr}, {essid} ({signalStrength}%)",
+       
+    },
+
+    "custom/notification": {
+        "format": "{} {icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "",
+            "dnd-notification": " ",
+            "dnd-none": "󰂛",
+            "inhibited-notification": " ",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": " ",
+            "dnd-inhibited-none": " ",
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+        "escape": true,
+    },
+
+}
+
+   

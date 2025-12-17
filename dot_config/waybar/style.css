@@ -1,0 +1,96 @@
+
+* {
+    font-family: Hack Nerd Font, Sans;
+    font-size: 14pt;
+    /*workspace color*/
+    color: #FFFFFF;
+ 
+}
+
+
+
+window#waybar {
+    background: rgba(31, 31, 57, 1);
+    border-radius: 10px; 
+
+}
+
+/*----------------------------------------------------------------------*/
+
+
+/* Clock */
+#clock {
+    color: #FFFFFF;
+    padding: 1px 10px;
+    margin: 4px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#clock:hover {
+    color: #B5A3BF;
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+/* CPU, RAM, Network, Battery icons */
+#battery {
+    color: #FFFFFF;
+    padding: 1px 10px;
+    margin: 4px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#battery:hover {
+    color: #B5A3BF;
+}
+
+/* -------------------------------------------------------------------------- */
+
+#wireplumber {
+    padding: 1px 15px;
+    margin: 1px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#wireplumber:hover {
+    color: #B5A3BF;
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+
+#network {
+    padding: 2px 7px;
+    margin: 4px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+
+}
+
+#network:hover {
+    color: #B5A3BF;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+#notification {
+    padding: 1px 25px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+
+}
+
+#custom:hover {
+    color: #B5A3BF;
+}
+
