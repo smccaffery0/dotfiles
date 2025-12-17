@@ -1,17 +1,21 @@
 return {
-  -- NEW Neovim 0.11+ LSP API
     "neovim/nvim-lspconfig",
+    dependencies = { "hrsh7th/cmp-nvim-lsp" },
     config = function()
-        local lsp = require("lspconfig")
-        local configs = vim.lsp.config
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-        configs("rust_analyzer", {})
-        configs("pyright", {})
-        configs("ts_ls", {})
-        configs("bashls", {})
-        configs("lua_ls", {})
-        configs("luau_lsp", {})
-        configs("typos_lsp", {})
-        configs("yamlls", {})
+        local servers = {
+            "rust_analyzer",
+            "pyright",
+            "ts_ls",
+            "bashls",
+            "lua_ls",
+            "yamlls",
+        }
+
+        for _, s in ipairs(servers) do
+            vim.lsp.config(s, { capabilities = capabilities })
+            vim.lsp.enable(s)
+        end
     end,
 }
