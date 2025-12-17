@@ -1,0 +1,88 @@
+#
+# ~/.bashrc
+#
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+
+#My custom aliases
+alias cr='cargo run'
+alias sdn='shutdown now'
+alias ff='fastfetch'
+alias lsa='. lsa'
+alias cl='clear'
+alias nv='nvim'
+alias dsk='Desktop'
+alias doc='Documents'
+alias pic='Pictures'
+alias pr='. pr'
+alias bn='. bn'
+alias bsh='. bsh'
+alias update='. update'
+alias lg='lazygit'
+alias install='sudo pacman -S'
+alias beaver='. beaver'
+alias wp='. wp'
+alias iftop='. iftop'
+alias internet='. internet'
+alias relbashrc='. relbashrc'
+alias reboot='. reboot'
+alias bg='. bg'
+alias mono='. mono'
+alias mycava='. mycava'
+alias sshdesktop='. sshdesktop'
+alias flipperz='. flipperz'
+alias yt='. yt'
+alias runc='. runc'
+alias uninstall='. uninstall'
+alias mono='. playmono'
+alias passosng='. passoSng'
+alias makimavc='. makimavc'
+alias ufwon='. ufwon'
+alias batsaver='. batsaver'
+alias fxcrptfiles='. fxcrptfiles'
+alias pkgp='. pkgp'
+alias thermal='. thermal'
+alias kiyomono='. kiyomono'
+
+#=============================================
+alias neo='. neo'
+alias hypland='. hypland'
+alias kittyconf='. kittyconf'
+alias wbarconf='. wbarconf' 
+
+#===================================================
+
+# Terminal profile cards
+alias makima='. makima'
+alias urama='. urama'
+alias bam='. bam'
+alias urek='. urek'
+alias kiyo='. kiyo'
+alias yuichii='. yuichii'
+alias hachiman='. hachiman'
+alias nathera='. nathera'
+
+#Aliases preinstalled
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+PS1='[\u@\h \W]\$ '
+
+#Allow for global scripts
+export PATH="$HOME/.local/bin:$PATH"
+
+#Zoxide program
+eval "$(zoxide init bash)"
+
+# oh my posh terminal
+eval "$(oh-my-posh init bash --config /usr/share/oh-my-posh/themes/powerline.omp.json)"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519 2>/dev/null
+
+# Change wallpaper
+[[ $PS1 && -f /usr/bash-completion/bash_completion ]] && \source /usr/share/bash-completion/bash_completion
+
+. "$HOME/.cargo/env"
+
+
