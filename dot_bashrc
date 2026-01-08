@@ -44,7 +44,7 @@ alias fxcrptfiles='. fxcrptfiles'
 alias pkgp='. pkgp'
 alias thermal='. thermal'
 alias kiyomono='. kiyomono'
-alias openfile'. openfile'
+alias openfile='. openfile'
 alias dev='. dev'
 
 
